@@ -26,16 +26,16 @@ public class Schedule {
                 } else {
                     return "Infomercial";
                 }
-            }
-        } else {
-            if (hourOfDay < 12) {
-                return "Talk Show";
-            } else if (hourOfDay >= 12 && hourOfDay <= 18) {
-                return "Game Show";
             } else {
-                return "News";
+                if (hourOfDay < 12) {
+                    return "Talk Show";
+                } else if (hourOfDay >= 12 && hourOfDay <= 18) {
+                    return "Game Show";
+                } else {
+                    return "News";
+                }
             }
         }
-        return null;
+        return "Unknown Channel";
     }
 }
